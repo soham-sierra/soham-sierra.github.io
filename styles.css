@@ -219,6 +219,15 @@ h2 {
   font-variant-numeric: tabular-nums;
 }
 
+.timeline-scroll {
+  max-height: 22rem;
+  overflow-y: auto;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0 1rem;
+  scrollbar-gutter: stable;
+}
+
 .timeline {
   list-style: none;
   padding: 0;
@@ -227,14 +236,14 @@ h2 {
 
 .timeline > li {
   display: grid;
-  grid-template-columns: 7.5rem 1fr;
-  gap: 0.75rem;
-  padding: 0.55rem 0;
+  grid-template-columns: 8rem 1fr;
+  gap: 0.85rem;
+  padding: 0.7rem 0;
   border-top: 1px solid var(--border);
 }
 
-.timeline > li:last-child {
-  border-bottom: 1px solid var(--border);
+.timeline > li:first-child {
+  border-top: none;
 }
 
 .timeline .date {
