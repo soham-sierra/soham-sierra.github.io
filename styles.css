@@ -203,12 +203,39 @@ h2 {
 }
 
 .timeline-scroll {
-  max-height: 22rem;
+  max-height: 24rem;
   overflow-y: auto;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 0 1rem;
+  padding-right: 0.5rem;
   scrollbar-gutter: stable;
+  mask-image: linear-gradient(
+    to bottom,
+    black 0,
+    black calc(100% - 2.5rem),
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 0,
+    black calc(100% - 2.5rem),
+    transparent 100%
+  );
+}
+
+.timeline-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.timeline-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.timeline-scroll::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+.timeline-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--meta);
 }
 
 .timeline {
