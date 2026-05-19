@@ -74,15 +74,34 @@ h1 {
   margin: 0;
   font-size: 0.95rem;
   color: var(--meta);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.15rem 0;
+  line-height: 1.9;
 }
 
 .contact a {
   color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.contact .icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  color: var(--meta);
+}
+
+.contact a:hover .icon {
+  color: var(--accent-hover);
 }
 
 .contact .sep {
   color: var(--border);
-  margin: 0 0.45rem;
+  margin: 0 0.55rem;
 }
 
 a {
@@ -157,42 +176,6 @@ h2 {
 .pubs .authors strong {
   color: var(--text);
   font-weight: 600;
-}
-
-.work-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.work-list > li {
-  margin-bottom: 1.4rem;
-}
-
-.work-list > li:last-child {
-  margin-bottom: 0;
-}
-
-.work-title {
-  margin: 0 0 0.2rem;
-  font-weight: 600;
-  color: var(--heading);
-}
-
-.work-title a {
-  font-weight: 600;
-}
-
-.work-meta {
-  font-weight: 400;
-  color: var(--meta);
-  font-size: 0.9rem;
-  margin-left: 0.5rem;
-}
-
-.work-desc {
-  margin: 0;
-  color: var(--text);
 }
 
 .writing-list {
@@ -351,16 +334,5 @@ footer p {
   .writing-list > li {
     flex-direction: column;
     gap: 0.15rem;
-  }
-
-  .work-title {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.1rem;
-  }
-
-  .work-meta {
-    margin-left: 0;
   }
 }
