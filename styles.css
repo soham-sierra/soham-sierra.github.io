@@ -159,6 +159,113 @@ h2 {
   font-weight: 600;
 }
 
+.work-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.work-list > li {
+  margin-bottom: 1.4rem;
+}
+
+.work-list > li:last-child {
+  margin-bottom: 0;
+}
+
+.work-title {
+  margin: 0 0 0.2rem;
+  font-weight: 600;
+  color: var(--heading);
+}
+
+.work-title a {
+  font-weight: 600;
+}
+
+.work-meta {
+  font-weight: 400;
+  color: var(--meta);
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+.work-desc {
+  margin: 0;
+  color: var(--text);
+}
+
+.writing-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.writing-list > li {
+  margin-bottom: 0.85rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem 0.75rem;
+}
+
+.writing-list > li:last-child {
+  margin-bottom: 0;
+}
+
+.writing-list .meta {
+  color: var(--meta);
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timeline > li {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 0.75rem;
+  padding: 0.55rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.timeline > li:last-child {
+  border-bottom: 1px solid var(--border);
+}
+
+.timeline .date {
+  color: var(--meta);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.95rem;
+}
+
+.timeline .event {
+  color: var(--text);
+}
+
+.pubs .cites {
+  display: inline;
+  margin-left: 0.4rem;
+  color: var(--meta);
+  font-size: 0.85rem;
+}
+
+footer {
+  margin-top: 3.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+  color: var(--meta);
+  font-size: 0.85rem;
+}
+
+footer p {
+  margin: 0;
+}
+
 .experience {
   list-style: none;
   padding: 0;
@@ -224,6 +331,27 @@ h2 {
   }
 
   .experience .meta {
+    margin-left: 0;
+  }
+
+  .timeline > li {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+
+  .writing-list > li {
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .work-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.1rem;
+  }
+
+  .work-meta {
     margin-left: 0;
   }
 }
