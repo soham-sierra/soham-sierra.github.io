@@ -203,21 +203,21 @@ h2 {
 }
 
 .timeline-scroll {
-  max-height: 24rem;
+  max-height: 22rem;
   overflow-y: auto;
-  padding-right: 0.5rem;
+  padding-right: 0.75rem;
   scrollbar-gutter: stable;
   mask-image: linear-gradient(
     to bottom,
-    black 0,
-    black calc(100% - 2.5rem),
-    transparent 100%
+    black,
+    black calc(100% - 2rem),
+    transparent
   );
   -webkit-mask-image: linear-gradient(
     to bottom,
-    black 0,
-    black calc(100% - 2.5rem),
-    transparent 100%
+    black,
+    black calc(100% - 2rem),
+    transparent
   );
 }
 
@@ -236,6 +236,11 @@ h2 {
 
 .timeline-scroll::-webkit-scrollbar-thumb:hover {
   background: var(--meta);
+}
+
+.timeline-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
 }
 
 .timeline {
