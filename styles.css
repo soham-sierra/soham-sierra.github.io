@@ -213,45 +213,71 @@ h2 {
   font-variant-numeric: tabular-nums;
 }
 
+.timeline-wrap {
+  position: relative;
+}
+
 .timeline-scroll {
   max-height: 22rem;
-  overflow-y: auto;
-  padding-right: 0.75rem;
+  overflow-y: scroll;
+  padding-right: 1rem;
   scrollbar-gutter: stable;
   mask-image: linear-gradient(
     to bottom,
     black,
-    black calc(100% - 2rem),
+    black calc(100% - 3rem),
     transparent
   );
   -webkit-mask-image: linear-gradient(
     to bottom,
     black,
-    black calc(100% - 2rem),
+    black calc(100% - 3rem),
     transparent
   );
+  scrollbar-width: thin;
+  scrollbar-color: var(--meta) var(--border);
 }
 
 .timeline-scroll::-webkit-scrollbar {
-  width: 6px;
+  width: 10px;
 }
 
 .timeline-scroll::-webkit-scrollbar-track {
-  background: transparent;
+  background: var(--border);
+  border-radius: 5px;
 }
 
 .timeline-scroll::-webkit-scrollbar-thumb {
-  background: var(--border);
-  border-radius: 3px;
+  background: var(--meta);
+  border-radius: 5px;
+  border: 2px solid var(--border);
 }
 
 .timeline-scroll::-webkit-scrollbar-thumb:hover {
-  background: var(--meta);
+  background: var(--heading);
 }
 
-.timeline-scroll {
-  scrollbar-width: thin;
-  scrollbar-color: var(--border) transparent;
+.timeline-hint {
+  position: absolute;
+  bottom: 0.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.78rem;
+  color: var(--meta);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  pointer-events: none;
+  letter-spacing: 0.02em;
+}
+
+.timeline-hint svg {
+  width: 12px;
+  height: 12px;
 }
 
 .timeline {
