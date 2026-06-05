@@ -11,7 +11,7 @@
   --accent: #065f46;
   --accent-hover: #047857;
 
-  --content-width: 700px;
+  --content-width: 1000px;
 }
 
 * {
@@ -293,10 +293,11 @@ h2 {
 
 .timeline > li {
   display: grid;
-  grid-template-columns: 8rem 1fr;
+  grid-template-columns: 7rem 1fr auto;
   gap: 0.85rem;
   padding: 0.7rem 0;
   border-top: 1px solid var(--border);
+  align-items: center;
 }
 
 .timeline > li:first-child {
@@ -311,6 +312,31 @@ h2 {
 
 .timeline .event {
   color: var(--text);
+}
+
+.timeline .thumb-link {
+  display: block;
+  flex-shrink: 0;
+  border-bottom: none;
+  line-height: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.timeline .thumb-link:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(17, 24, 39, 0.15);
+  border-bottom: none;
+}
+
+.timeline .thumb {
+  display: block;
+  width: 96px;
+  height: 64px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  border-radius: 6px;
 }
 
 .pubs .cites {
@@ -421,8 +447,30 @@ footer p {
   }
 
   .timeline > li {
-    grid-template-columns: 1fr;
-    gap: 0.15rem;
+    grid-template-columns: 1fr auto;
+    gap: 0.15rem 0.75rem;
+    align-items: start;
+  }
+
+  .timeline .date {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .timeline .event {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .timeline .thumb-link {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: center;
+  }
+
+  .timeline .thumb {
+    width: 72px;
+    height: 48px;
   }
 
   .writing-list > li {
