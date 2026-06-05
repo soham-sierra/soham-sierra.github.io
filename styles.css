@@ -172,6 +172,10 @@ h2 {
   color: var(--accent);
 }
 
+.pubs > li.pub-code .pub-icon {
+  color: var(--text);
+}
+
 .pub-body {
   min-width: 0;
 }
