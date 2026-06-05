@@ -137,12 +137,6 @@ h2 {
   margin-bottom: 0;
 }
 
-#bio .bio-lead {
-  color: var(--heading);
-  font-size: 1.15rem;
-  font-weight: 600;
-  margin-bottom: 1.25rem;
-}
 
 .pubs {
   list-style: none;
